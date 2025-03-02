@@ -1,80 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranavi | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-
-    <header>
-        <div class="logo">Pranavi</div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="darkModeToggle">🌞</button></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Hello, I'm <span>Pranavi</span></h1>
-            <p>Information Systems Graduate Student & Data Science Enthusiast</p>
-            <div class="buttons">
-                <a href="#about" class="btn primary">Learn More</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="images/avatar.jpg" alt="Avatar">
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="images/profile.jpg" alt="Pranavi">
-            <p>I am a passionate Information Systems graduate student with a strong background in data science, analytics, and engineering.</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-list">
-            <span>Python</span> <span>Java</span> <span>FastAPI</span> <span>Docker</span>
-            <span>Power BI</span> <span>Tableau</span> <span>Seaborn</span> <span>Matplotlib</span>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>EduSearch AI</h3>
-            <p>Designed a scalable pipeline using OpenAI Whisper and Pinecone.</p>
-            <a href="#" class="github-link">View on GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Multi-Agent RAG</h3>
-            <p>Created an interactive Streamlit interface for AI-driven research.</p>
-            <a href="#" class="github-link">View on GitHub</a>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: jeedigunta.s@northeastern.edu</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/pranavijs" target="_blank">linkedin.com/in/pranavijs</a></p>
-        <p>GitHub: <a href="https://github.com/SaiPranaviJeedigunta" target="_blank">github.com/SaiPranaviJeedigunta</a></p>
-    </section>
-
-    <button id="scrollToTop">⬆</button>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Pranavi Jeedigunta | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Sai Pranavi Jeedigunta - Information Systems Graduate Student & Data Science Enthusiast">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sai Pranavi Jeedigunta | Portfolio">
+    <meta property="og:description" content="Information Systems Graduate Student & Data Science Enthusiast">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sai Pranavi Jeedigunta | Portfolio">
+    <meta property="twitter:description" content="Information Systems Graduate Student & Data Science Enthusiast">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
