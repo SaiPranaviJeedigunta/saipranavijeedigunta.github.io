@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: "Arial", sans-serif;
+    font-family: Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
     margin: 0;
@@ -20,13 +20,11 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 15px 40px;
     background: black;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
     z-index: 100;
 }
 
@@ -43,61 +41,20 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: var(--text);
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover, nav ul li a.active {
-    color: var(--highlight);
-}
-
-/* Hero Section */
 .hero {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 100px 10%;
 }
 
-.hero-text h1 {
-    font-size: 42px;
-    margin: 0;
-}
-
-.hero-text span {
-    color: var(--accent);
-    font-weight: bold;
-}
-
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
 .hero-image img {
     width: 250px;
-    height: 250px;
     border-radius: 50%;
-    background: #3c3836;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.buttons {
-    margin-top: 20px;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 5px;
+    padding: 12px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -108,122 +65,9 @@ nav ul li a:hover, nav ul li a.active {
     color: white;
 }
 
-.primary:hover {
-    background: var(--button-hover);
-}
-
 .secondary {
     border: 2px solid var(--button-bg);
     color: var(--button-bg);
-}
-
-.secondary:hover {
-    background: var(--button-bg);
-    color: white;
-}
-
-/* About Section */
-#about {
-    padding: 60px 10%;
-    text-align: center;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.about-content img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-/* Skills */
-#skills {
-    padding: 60px 10%;
-}
-
-.skill-category h3 {
-    color: var(--accent);
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills-list span {
-    background: var(--secondary);
-    padding: 8px 12px;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-}
-
-/* Projects */
-#projects {
-    padding: 60px 10%;
-}
-
-.project {
-    background: #3c3836;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-.project h3 {
-    color: var(--highlight);
-}
-
-.github-link {
-    color: var(--highlight);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Contact */
-#contact {
-    padding: 60px 10%;
-    text-align: center;
-}
-
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.contact-info p {
-    margin: 10px 0;
-}
-
-form input, form textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid var(--accent);
-    border-radius: 5px;
-    background: #282828;
-    color: var(--text);
-}
-
-form button {
-    padding: 10px 20px;
-    background: var(--button-bg);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: var(--button-hover);
 }
 
 /* Scroll to Top */

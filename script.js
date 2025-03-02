@@ -7,10 +7,8 @@ document.querySelectorAll("nav ul li a").forEach(anchor => {
 });
 
 // Dark Mode Toggle
-const darkModeToggle = document.getElementById("darkModeToggle");
-darkModeToggle.addEventListener("click", function () {
+document.getElementById("darkModeToggle").addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
-    darkModeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "🌞";
 });
 
 // Scroll to top
