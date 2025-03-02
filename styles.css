@@ -1,12 +1,16 @@
+/* Gruvbox Theme */
 :root {
     --bg: #1d2021;
     --text: #ebdbb2;
     --accent: #d65d0e;
     --secondary: #b16286;
+    --highlight: #fabd2f;
+    --button-bg: #d65d0e;
+    --button-hover: #af3a03;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
     background: var(--bg);
     color: var(--text);
     margin: 0;
@@ -16,12 +20,18 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
+    align-items: center;
+    padding: 15px 40px;
     background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: var(--accent);
 }
@@ -29,47 +39,194 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
     color: var(--text);
     text-decoration: none;
+    font-size: 16px;
 }
 
+nav ul li a:hover, nav ul li a.active {
+    color: var(--highlight);
+}
+
+/* Hero Section */
 .hero {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 100px 10%;
 }
 
-.hero-text h1 span {
+.hero-text h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.hero-text span {
     color: var(--accent);
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .hero-image img {
-    width: 200px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #3c3836;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary {
+    background: var(--button-bg);
+    color: white;
+}
+
+.primary:hover {
+    background: var(--button-hover);
+}
+
+.secondary {
+    border: 2px solid var(--button-bg);
+    color: var(--button-bg);
+}
+
+.secondary:hover {
+    background: var(--button-bg);
+    color: white;
+}
+
+/* About Section */
+#about {
+    padding: 60px 10%;
+    text-align: center;
 }
 
 .about-content {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Skills */
+#skills {
+    padding: 60px 10%;
+}
+
+.skill-category h3 {
+    color: var(--accent);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .skills-list span {
     background: var(--secondary);
-    padding: 5px 10px;
-    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Projects */
+#projects {
+    padding: 60px 10%;
+}
+
+.project {
+    background: #3c3836;
+    padding: 20px;
+    margin: 10px 0;
     border-radius: 5px;
 }
 
-button {
-    background: var(--accent);
-    color: var(--text);
-    border: none;
-    padding: 10px;
+.project h3 {
+    color: var(--highlight);
 }
 
+.github-link {
+    color: var(--highlight);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact */
+#contact {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    background: #282828;
+    color: var(--text);
+}
+
+form button {
+    padding: 10px 20px;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--button-hover);
+}
+
+/* Scroll to Top */
 #scrollToTop {
     position: fixed;
     bottom: 20px;
@@ -78,4 +235,8 @@ button {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
 }
