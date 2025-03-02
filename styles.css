@@ -1,0 +1,81 @@
+:root {
+    --bg: #1d2021;
+    --text: #ebdbb2;
+    --accent: #d65d0e;
+    --secondary: #b16286;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: black;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.hero-text h1 span {
+    color: var(--accent);
+}
+
+.hero-image img {
+    width: 200px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.skills-list span {
+    background: var(--secondary);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button {
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    padding: 10px;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}

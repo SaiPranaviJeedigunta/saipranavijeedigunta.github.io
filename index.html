@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranavi | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Pranavi</div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="darkModeToggle">🌞</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm <span>Pranavi</span></h1>
+            <p>Information Systems Graduate Student & Data Science Enthusiast</p>
+            <div class="buttons">
+                <a href="#about" class="btn primary">Learn More</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/avatar.png" alt="Avatar">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="images/profile.jpg" alt="Pranavi">
+            <p>I am a passionate Information Systems graduate student with a strong background in data science, analytics, and engineering. My expertise spans across various domains including machine learning, data visualization, and big data technologies.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-category">
+            <h3>Programming & Frameworks</h3>
+            <div class="skills-list">
+                <span>Python</span> <span>Java</span> <span>FastAPI</span> <span>Docker</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Data Analysis</h3>
+            <div class="skills-list">
+                <span>Power BI</span> <span>Tableau</span> <span>Seaborn</span> <span>Matplotlib</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>EduSearch AI</h3>
+            <p>Designed a scalable pipeline using OpenAI Whisper and Pinecone.</p>
+            <a href="#" class="github-link">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Multi-Agent RAG</h3>
+            <p>Created an interactive Streamlit interface for AI-driven research.</p>
+            <a href="#" class="github-link">View on GitHub</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>Email: jeedigunta.s@northeastern.edu</p>
+                <p>LinkedIn: linkedin.com/in/pranavijs/</p>
+                <p>GitHub: github.com/SaiPranaviJeedigunta/</p>
+            </div>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <button id="scrollToTop">⬆</button>
+
+</body>
+</html>
