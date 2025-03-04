@@ -20,11 +20,11 @@ function App() {
     <div className="bg-gruvbox-light-bg dark:bg-gruvbox-bg rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
       <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-gruvbox-orange dark:text-gruvbox-orange">{title}</h3>
+        <h3 className="text-xl font-bold mb-2 text-gruvbox-blue dark:text-gruvbox-blue">{title}</h3>
         <p className="text-sm text-gruvbox-light-gray dark:text-gruvbox-gray mb-2">{date}</p>
         <p className="text-gruvbox-light-fg dark:text-gruvbox-fg mb-4">{description}</p>
         <div className="flex justify-between items-center">
-          <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center text-gruvbox-orange hover:text-gruvbox-red transition-colors">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center text-gruvbox-blue hover:text-gruvbox-aqua transition-colors">
             {linkType === 'github' ? (
               <>
                 <Github size={18} className="mr-1" /> View on GitHub
@@ -103,7 +103,7 @@ function App() {
       {/* Navigation */}
 <nav className="fixed w-full bg-white dark:bg-gruvbox-bg shadow-md z-50 transition-colors">
   <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-    <a href="#home" className="text-2xl font-bold text-gruvbox-orange dark:text-gruvbox-orange" 
+    <a href="#home" className="text-2xl font-bold text-gruvbox-blue dark:text-gruvbox-blue" 
        onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
       Pranavi
     </a>
@@ -114,8 +114,8 @@ function App() {
         <a
           key={section}
           href={`#${section}`}
-          className={`capitalize hover:text-gruvbox-orange dark:hover:text-gruvbox-orange transition-colors ${
-            activeSection === section ? 'text-gruvbox-orange dark:text-gruvbox-orange font-semibold' : 'dark:text-gruvbox-fg text-gruvbox-light-fg'
+          className={`capitalize hover:text-gruvbox-blue dark:hover:text-gruvbox-blue transition-colors ${
+            activeSection === section ? 'text-gruvbox-blue dark:text-gruvbox-blue font-semibold' : 'dark:text-gruvbox-fg text-gruvbox-light-fg'
           }`}
           onClick={(e) => { e.preventDefault(); scrollToSection(section); }}
         >
@@ -129,7 +129,7 @@ function App() {
         className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gruvbox-darkgray transition-colors"
         aria-label="Toggle dark mode"
       >
-        {darkMode ? <Sun size={20} className="text-gruvbox-yellow" /> : <Moon size={20} className="text-gruvbox-blue" />}
+        {darkMode ? <Sun size={20} className="text-gruvbox-green" /> : <Moon size={20} className="text-gruvbox-blue" />}
       </button>
     </div>
 
@@ -141,12 +141,12 @@ function App() {
         className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gruvbox-darkgray transition-colors"
         aria-label="Toggle dark mode"
       >
-        {darkMode ? <Sun size={20} className="text-gruvbox-yellow" /> : <Moon size={20} className="text-gruvbox-blue" />}
+        {darkMode ? <Sun size={20} className="text-gruvbox-green" /> : <Moon size={20} className="text-gruvbox-blue" />}
       </button>
       
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-orange dark:hover:text-gruvbox-orange focus:outline-none"
+        className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-blue dark:hover:text-gruvbox-blue focus:outline-none"
       >
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
@@ -160,8 +160,8 @@ function App() {
         <a
           key={section}
           href={`#${section}`}
-          className={`block py-2 capitalize hover:text-gruvbox-orange dark:hover:text-gruvbox-orange transition-colors ${
-            activeSection === section ? 'text-gruvbox-orange dark:text-gruvbox-orange font-semibold' : 'dark:text-gruvbox-fg text-gruvbox-light-fg'
+          className={`block py-2 capitalize hover:text-gruvbox-blue dark:hover:text-gruvbox-blue transition-colors ${
+            activeSection === section ? 'text-gruvbox-blue dark:text-gruvbox-blue font-semibold' : 'dark:text-gruvbox-fg text-gruvbox-light-fg'
           }`}
           onClick={(e) => { e.preventDefault(); scrollToSection(section); }}
         >
@@ -178,7 +178,7 @@ function App() {
     <div className="flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 mb-12 md:mb-0">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-          Hello, I'm <span className="text-gruvbox-orange dark:text-gruvbox-orange">Sai Pranavi Jeedigunta</span>
+          Hello, I'm <span className="text-gruvbox-blue dark:text-gruvbox-blue">Sai Pranavi Jeedigunta</span>
         </h1>
         <p className="text-xl md:text-2xl text-gruvbox-light-fg dark:text-gruvbox-fg opacity-80 mb-6">
           Information Systems Graduate Student | Data Engineering, Data Science, Analytics & AI Enthusiast
@@ -188,13 +188,13 @@ function App() {
         <div className="flex space-x-4 mb-6">
           <button 
             onClick={() => scrollToSection('about')}
-            className="bg-gruvbox-orange hover:bg-gruvbox-red text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center"
+            className="bg-gruvbox-blue hover:bg-gruvbox-aqua text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center"
           >
             Learn More <ChevronDown className="ml-2" size={18} />
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
-            className="border-2 border-gruvbox-orange text-gruvbox-orange hover:bg-gruvbox-orange hover:bg-opacity-10 font-semibold py-3 px-6 rounded-lg transition-colors"
+            className="border-2 border-gruvbox-aqua text-gruvbox-blue hover:bg-gruvbox-blue hover:bg-opacity-10 font-semibold py-3 px-6 rounded-lg transition-colors"
           >
             Contact Me
           </button>
@@ -206,7 +206,7 @@ function App() {
             href="https://linkedin.com/in/pranavijs/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-gruvbox-orange hover:text-gruvbox-red transition-colors"
+            className="text-gruvbox-blue hover:text-gruvbox-aqua transition-colors"
           >
             <Linkedin size={28} />
           </a>
@@ -214,13 +214,13 @@ function App() {
             href="https://github.com/SaiPranaviJeedigunta/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-gruvbox-orange hover:text-gruvbox-red transition-colors"
+            className="text-gruvbox-blue hover:text-gruvbox-aqua transition-colors"
           >
             <Github size={28} />
           </a>
           <a 
             href="mailto:jeedigunta.s@northeastern.edu" 
-            className="text-gruvbox-orange hover:text-gruvbox-red transition-colors"
+            className="text-gruvbox-blue hover:text-gruvbox-aqua transition-colors"
           >
             <Mail size={28} />
           </a>
@@ -251,7 +251,7 @@ function App() {
           <div className="flex flex-col md:flex-row gap-12 mb-12">
             {/* Profile Image */}
             <div className="md:w-1/3 flex justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 flex items-center justify-center shadow-lg">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 flex items-center justify-center shadow-lg">
               <span className="text-6xl">👩‍💻</span>
               </div>
             </div>
@@ -280,8 +280,8 @@ function App() {
               <button 
                 className={`py-3 px-6 font-medium text-lg ${
                   activeTab === 'education' 
-                    ? 'border-b-2 border-gruvbox-orange text-gruvbox-orange' 
-                    : 'text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-orange dark:hover:text-gruvbox-orange'
+                    ? 'border-b-2 border-gruvbox-aqua text-gruvbox-blue' 
+                    : 'text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-blue dark:hover:text-gruvbox-blue'
                 }`}
                 onClick={() => setActiveTab('education')}
               >
@@ -290,8 +290,8 @@ function App() {
               <button 
                 className={`py-3 px-6 font-medium text-lg ${
                   activeTab === 'experience' 
-                    ? 'border-b-2 border-gruvbox-orange text-gruvbox-orange' 
-                    : 'text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-orange dark:hover:text-gruvbox-orange'
+                    ? 'border-b-2 border-gruvbox-aqua text-gruvbox-blue' 
+                    : 'text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-blue dark:hover:text-gruvbox-blue'
                 }`}
                 onClick={() => setActiveTab('experience')}
               >
@@ -304,7 +304,7 @@ function App() {
               <div className="bg-gruvbox-light-bg dark:bg-gruvbox-bg bg-opacity-50 dark:bg-opacity-50 p-8 rounded-lg shadow-md">
                 <div className="space-y-8">
                   <div>
-                    <h4 className="text-xl font-medium text-gruvbox-orange dark:text-gruvbox-orange">Master of Science in Information Systems</h4>
+                    <h4 className="text-xl font-medium text-gruvbox-blue dark:text-gruvbox-blue">Master of Science in Information Systems</h4>
                     <p className="text-gruvbox-light-fg dark:text-gruvbox-fg">Northeastern University, Boston, MA</p>
                     <p className="text-gruvbox-light-gray dark:text-gruvbox-gray">Expected Dec. 2025</p>
                     <p className="mt-2 text-gruvbox-light-fg dark:text-gruvbox-fg">
@@ -313,7 +313,7 @@ function App() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-gruvbox-orange dark:text-gruvbox-orange">Bachelor of Technology in Computer Science Engineering</h4>
+                    <h4 className="text-xl font-medium text-gruvbox-blue dark:text-gruvbox-blue">Bachelor of Technology in Computer Science Engineering</h4>
                     <p className="text-gruvbox-light-fg dark:text-gruvbox-fg">Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad, India</p>
                     <p className="text-gruvbox-light-gray dark:text-gruvbox-gray">Jun 2023</p>
                   </div>
@@ -326,7 +326,7 @@ function App() {
               <div className="bg-gruvbox-light-bg dark:bg-gruvbox-bg bg-opacity-50 dark:bg-opacity-50 p-8 rounded-lg shadow-md">
                 <div className="space-y-8">
                   <div>
-                    <h4 className="text-xl font-medium text-gruvbox-orange dark:text-gruvbox-orange">Data Science and Analytics Research Assistant</h4>
+                    <h4 className="text-xl font-medium text-gruvbox-blue dark:text-gruvbox-blue">Data Science and Analytics Research Assistant</h4>
                     <p className="text-gruvbox-light-fg dark:text-gruvbox-fg">Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad, India</p>
                     <p className="text-gruvbox-light-gray dark:text-gruvbox-gray">Jan. 2022 – May 2023</p>
                     <ul className="list-disc list-inside mt-2 space-y-1 text-gruvbox-light-fg dark:text-gruvbox-fg">
@@ -337,7 +337,7 @@ function App() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-gruvbox-orange dark:text-gruvbox-orange">Digital Marketing Intern</h4>
+                    <h4 className="text-xl font-medium text-gruvbox-blue dark:text-gruvbox-blue">Digital Marketing Intern</h4>
                     <p className="text-gruvbox-light-fg dark:text-gruvbox-fg">Indian Institute of Digital Education, Hyderabad, India</p>
                     <p className="text-gruvbox-light-gray dark:text-gruvbox-gray">Sept. 2022 – Nov. 2022</p>
                     <ul className="list-disc list-inside mt-2 space-y-1 text-gruvbox-light-fg dark:text-gruvbox-fg">
@@ -360,10 +360,10 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gruvbox-bg dark:bg-opacity-70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gruvbox-orange dark:text-gruvbox-orange">Programming & Frameworks</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gruvbox-blue dark:text-gruvbox-blue">Programming & Frameworks</h3>
               <div className="flex flex-wrap gap-2">
                 {['Python', 'Java', 'FastAPI', 'Docker', 'REST APIs', 'Keras', 'Jupyter Notebook', 'Terraform'].map(skill => (
-                  <span key={skill} className="bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-orange px-3 py-1 rounded-full text-sm">
+                  <span key={skill} className="bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-blue px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
@@ -371,10 +371,10 @@ function App() {
             </div>
             
             <div className="bg-white dark:bg-gruvbox-bg dark:bg-opacity-70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gruvbox-orange dark:text-gruvbox-orange">Database Systems & Data Warehousing</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gruvbox-blue dark:text-gruvbox-blue">Database Systems & Data Warehousing</h3>
               <div className="flex flex-wrap gap-2">
                 {['SQL', 'MySQL', 'Oracle SQL', 'BigQuery', 'Snowflake', 'NoSQL', 'Pinecone'].map(skill => (
-                  <span key={skill} className="bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-orange px-3 py-1 rounded-full text-sm">
+                  <span key={skill} className="bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-blue px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
@@ -382,10 +382,10 @@ function App() {
             </div>
             
             <div className="bg-white dark:bg-gruvbox-bg dark:bg-opacity-70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gruvbox-orange dark:text-gruvbox-orange">Data Analysis and Visualization</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gruvbox-blue dark:text-gruvbox-blue">Data Analysis and Visualization</h3>
               <div className="flex flex-wrap gap-2">
                 {['Power BI', 'Tableau', 'Matplotlib', 'Seaborn', 'Streamlit', 'Pandas', 'GeoPandas', 'Numpy'].map(skill => (
-                  <span key={skill} className="bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-orange px-3 py-1 rounded-full text-sm">
+                  <span key={skill} className="bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-blue px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
@@ -393,10 +393,10 @@ function App() {
             </div>
             
             <div className="bg-white dark:bg-gruvbox-bg dark:bg-opacity-70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gruvbox-orange dark:text-gruvbox-orange">Big Data & ETL Tools</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gruvbox-blue dark:text-gruvbox-blue">Big Data & ETL Tools</h3>
               <div className="flex flex-wrap gap-2">
                 {['Apache Spark', 'Kafka', 'GCP Dataflow', 'Apache Airflow', 'LlamaIndex', 'Azure Databricks', 'Talend'].map(skill => (
-                  <span key={skill} className="bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-orange px-3 py-1 rounded-full text-sm">
+                  <span key={skill} className="bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-blue px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
@@ -404,10 +404,10 @@ function App() {
             </div>
             
             <div className="bg-white dark:bg-gruvbox-bg dark:bg-opacity-70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gruvbox-orange dark:text-gruvbox-orange">Data Mining & Machine Learning</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gruvbox-blue dark:text-gruvbox-blue">Data Mining & Machine Learning</h3>
               <div className="flex flex-wrap gap-2">
                 {['PyTorch', 'Scikit-learn', 'NLP', 'spaCy', 'NLTK', 'BeautifulSoup', 'Selenium', 'TensorFlow'].map(skill => (
-                  <span key={skill} className="bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-orange px-3 py-1 rounded-full text-sm">
+                  <span key={skill} className="bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-blue px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
@@ -415,20 +415,20 @@ function App() {
             </div>
             
             <div className="bg-white dark:bg-gruvbox-bg dark:bg-opacity-70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gruvbox-orange dark:text-gruvbox-orange">Cloud Platforms & Version Control</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gruvbox-blue dark:text-gruvbox-blue">Cloud Platforms & Version Control</h3>
               <div className="flex flex-wrap gap-2">
                 {['Google Cloud Platform (GCP)', 'AWS', 'Azure', 'Git', 'GitHub', 'GitLab', 'Kubernetes'].map(skill => (
-                  <span key={skill} className="bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-orange px-3 py-1 rounded-full text-sm">
+                  <span key={skill} className="bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-blue px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
               </div>
             </div>
             <div className="bg-white dark:bg-gruvbox-bg dark:bg-opacity-70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gruvbox-orange dark:text-gruvbox-orange">Office Productivity</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gruvbox-blue dark:text-gruvbox-blue">Office Productivity</h3>
               <div className="flex flex-wrap gap-2">
                 {['MS Office Suite', 'Google Workspace'].map(skill => (
-                  <span key={skill} className="bg-gruvbox-light-yellow dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-orange px-3 py-1 rounded-full text-sm">
+                  <span key={skill} className="bg-gruvbox-gray dark:bg-gruvbox-yellow bg-opacity-20 dark:bg-opacity-20 text-gruvbox-light-orange dark:text-gruvbox-blue px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
@@ -456,7 +456,7 @@ function App() {
 
       {/* Text Section */}
       <div className="md:w-2/3 md:pl-6">
-        <h3 className="text-xl font-semibold text-gruvbox-orange dark:text-gruvbox-orange mb-2">
+        <h3 className="text-xl font-semibold text-gruvbox-blue dark:text-gruvbox-blue mb-2">
           Traffic Rules Violation Detection using YOLO and HAAR Cascade
         </h3>
         <p className="text-gruvbox-light-fg dark:text-gruvbox-fg mb-2"><strong>Publisher:</strong> IEEE</p>
@@ -470,7 +470,7 @@ function App() {
           href="https://ieeexplore.ieee.org/document/10112954" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center text-gruvbox-orange hover:text-gruvbox-red transition-colors"
+          className="flex items-center text-gruvbox-blue hover:text-gruvbox-aqua transition-colors"
         >
           <ExternalLink size={20} className="mr-2" />
           View Publication
@@ -611,37 +611,37 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-gruvbox-orange dark:text-gruvbox-orange">
+              <h3 className="text-2xl font-semibold mb-6 text-gruvbox-blue dark:text-gruvbox-blue">
                 Contact Information
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Mail className="text-gruvbox-orange dark:text-gruvbox-orange mr-4" size={24} />
+                  <Mail className="text-gruvbox-blue dark:text-gruvbox-blue mr-4" size={24} />
                   <a
                     href="mailto:jeedigunta.s@northeastern.edu"
-                    className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-orange dark:hover:text-gruvbox-orange transition-colors"
+                    className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-blue dark:hover:text-gruvbox-blue transition-colors"
                   >
                     jeedigunta.s@northeastern.edu
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Linkedin className="text-gruvbox-orange dark:text-gruvbox-orange mr-4" size={24} />
+                  <Linkedin className="text-gruvbox-blue dark:text-gruvbox-blue mr-4" size={24} />
                   <a
                     href="https://linkedin.com/in/pranavijs/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-orange dark:hover:text-gruvbox-orange transition-colors"
+                    className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-blue dark:hover:text-gruvbox-blue transition-colors"
                   >
                     linkedin.com/in/pranavijs/
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Github className="text-gruvbox-orange dark:text-gruvbox-orange mr-4" size={24} />
+                  <Github className="text-gruvbox-blue dark:text-gruvbox-blue mr-4" size={24} />
                   <a
                     href="https://github.com/SaiPranaviJeedigunta/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-orange dark:hover:text-gruvbox-orange transition-colors"
+                    className="text-gruvbox-light-fg dark:text-gruvbox-fg hover:text-gruvbox-blue dark:hover:text-gruvbox-blue transition-colors"
                   >
                     github.com/SaiPranaviJeedigunta/
                   </a>
@@ -651,7 +651,7 @@ function App() {
 
             {/* Contact Form */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-gruvbox-orange dark:text-gruvbox-orange">
+              <h3 className="text-2xl font-semibold mb-6 text-gruvbox-blue dark:text-gruvbox-blue">
                 Send Me a Message
               </h3>
               
@@ -708,7 +708,7 @@ function App() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="bg-gruvbox-orange hover:bg-gruvbox-red text-white font-semibold py-2 px-6 rounded-lg transition-colors w-full"
+                  className="bg-gruvbox-blue hover:bg-gruvbox-aqua text-white font-semibold py-2 px-6 rounded-lg transition-colors w-full"
                 >
                   Send Message
                 </button>
@@ -729,7 +729,7 @@ function App() {
                 href="https://linkedin.com/in/pranavijs/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gruvbox-light-bg dark:text-gruvbox-fg hover:text-gruvbox-light-yellow dark:hover:text-gruvbox-yellow transition-colors"
+                className="text-gruvbox-light-bg dark:text-gruvbox-fg hover:text-gruvbox-light-yellow dark:hover:text-gruvbox-green transition-colors"
               >
                 <Linkedin size={20} />
               </a>
@@ -737,13 +737,13 @@ function App() {
                 href="https://github.com/SaiPranaviJeedigunta/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gruvbox-light-bg dark:text-gruvbox-fg hover:text-gruvbox-light-yellow dark:hover:text-gruvbox-yellow transition-colors"
+                className="text-gruvbox-light-bg dark:text-gruvbox-fg hover:text-gruvbox-light-yellow dark:hover:text-gruvbox-green transition-colors"
               >
                 <Github size={20} />
               </a>
               <a 
                 href="mailto:jeedigunta.s@northeastern.edu" 
-                className="text-gruvbox-light-bg dark:text-gruvbox-fg hover:text-gruvbox-light-yellow dark:hover:text-gruvbox-yellow transition-colors"
+                className="text-gruvbox-light-bg dark:text-gruvbox-fg hover:text-gruvbox-light-yellow dark:hover:text-gruvbox-green transition-colors"
               >
                 <Mail size={20} />
               </a>
@@ -756,7 +756,7 @@ function App() {
       {showScrollToTop && (
         <button 
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-gruvbox-orange text-white p-3 rounded-full shadow-lg hover:bg-gruvbox-red transition-colors"
+          className="fixed bottom-6 right-6 bg-gruvbox-blue text-white p-3 rounded-full shadow-lg hover:bg-gruvbox-aqua transition-colors"
           aria-label="Scroll to top"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
